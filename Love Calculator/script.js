@@ -46,9 +46,14 @@ function calculateLove() {
             message += "<br><br>" + poemsData.deveshDiksha.join('<br>');
         }
 
-        else if ((name1Lower === "devesh" && name2Lower === "misthi") || (name1Lower === "misthi" && name2Lower === "devesh")) {
+        else if ((name1Lower === "devil" && name2Lower === "misthi") || (name1Lower === "misthi" && name2Lower === "devil")) {
             message = "Sup Misthi!! <br>How ya doing my little sister XD <br>Taking care of yourself? <br>This poem is for you!! Xd 💫💕";
             message += "<br><br>" + poemsData.deveshMisthi.join('<br>');
+        }
+
+        else if ((name1Lower === "devil" && name2Lower === "azu") || (name1Lower === "azu" && name2Lower === "devil")) {
+            message = "Sup Azu!! <br>How ya doing bestie XD <br>Taking care of yourself? <br>This poem is for you!! Xd 💫💕";
+            message += "<br><br>" + poemsData.deveshAzu.join('<br>');
         }
 
         else {
