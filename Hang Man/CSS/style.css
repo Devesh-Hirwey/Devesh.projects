@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 62.5%;
+}
+
+/* NavBar Here */
+
+nav {
+    background: rgb(26, 22, 22);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .mainMenu {
+    display: flex;
+    list-style: none;
+}
+
+nav .mainMenu li a {
+    display: inline-block;
+    padding: 2.5rem;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+nav .mainMenu li a:hover {
+    background-color: rgba(0, 255, 255, 0.295);
+}
+
+nav .openMenu {
+    font-size: 2rem;
+    margin: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+nav .mainMenu .closeMenu,
+.icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+.fa-facebook,
+.fa-instagram,
+.fa-discord,
+.fa-github {
+    color: rgb(200, 200, 245);
+    text-shadow: 0 0 15px rgba(230, 230, 255, 0.466);
+    background: transparent;
+    padding: .71rem;
+    border: none;
+    border-radius: 50%;
+
+}
+
+:where(.fa-facebook, .fa-instagram, .fa-discord, .fa-github):hover {
+    background: rgba(183, 241, 255, 0.678);
+    color: rgb(26, 22, 22);
+    box-shadow: 0 0 7px rgba(255, 255, 255, 0.753);
+    border: none;
+}
+
+nav .logo {
+    margin: .6rem;
+    font-size: 2.5rem;
+    user-select: none;
+}
+
+@media (max-width: 786px) {
+    nav .mainMenu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgb(26, 22, 22);
+        transition: top 1s ease;
+        display: none;
+    }
+
+    nav .mainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    nav .openMenu {
+        display: block;
+    }
+
+    nav .mainMenu li a:hover {
+        background: none;
+        color: rgb(161, 105, 1);
+        font-size: 1.6rem;
+    }
+
+    .icons i {
+        display: inline-block;
+    }
+}
+
+/* Main Body and ALL that */
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: hsl(347, 16%, 16%);
+    padding: 0 1rem;
+}
+
+.container {
+    width: 85rem;
+    background: hsl(12, 20%, 20%);
+    display: flex;
+    gap: 7rem;
+    align-items: flex-end;
+    padding: 6rem 4rem;
+    border-radius: 1rem;
+}
+
+.hangman-box img {
+    max-width: 20vw;
+}
+
+.hangman-box h1 {
+    font-size: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fffafa;
+}
+
+.word-display {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.word-display .letter {
+    width: 2.8rem;
+    border-bottom: 3px solid #fffafab7;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fffafae7;
+}
+
+.word-display .letter.guessed {
+    border-color: transparent;
+    margin: -2rem 0 3.5rem;
+}
+
+.game-box {
+    transform: scale(0.9);
+    /* This scales everything in the .game-box by 90% */
+    margin-bottom: -4rem;
+}
+
+
+.game-box h4 {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: #fffafae3;
+}
+
+.game-box h4 b {
+    font-weight: 600;
+}
+
+.game-box .guesses-text b {
+    color: hsla(40, 100%, 82%, 0.89);
+}
+
+.keyboard {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.keyboard button[disabled] {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+:where(.keyboard, .game-modal) button {
+    font-size: 1.8rem;
+    width: calc(100% / 9 - .5rem);
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.938);
+    font-weight: 400;
+    cursor: pointer;
+    outline: none;
+    background: hsla(13, 37%, 80%, 0.973);
+    border-radius: .8rem;
+    transition: 0.3s ease-in;
+    padding: .7rem;
+}
+
+:where(.keyboard, .game-modal) button:hover {
+    background: rgba(9, 9, 77, 0.815);
+    color: rgba(156, 148, 148, 0.938);
+    box-shadow: 0 0 1rem hsla(13, 37%, 80%, 0.973);
+    text-shadow: 0 0 1rem rgba(255, 255, 255, 0.815);
+}
+
+.game-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 999;
+    background: rgba(31, 29, 29, 0.966);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.4s ease;
+}
+
+.game-modal.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.game-modal .content {
+    background: hsla(69, 69%, 69%, 0.69);
+    max-width: 42rem;
+    width: 100%;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 3rem;
+}
+
+.game-modal img {
+    max-width: 13rem;
+}
+
+.game-modal h4 {
+    font-size: 2rem;
+}
+
+.game-modal p {
+    font-size: 1.8rem;
+    margin: 1.5rem 0 3rem;
+}
+
+.game-modal p b {
+    color: rgba(43, 9, 75, 0.959);
+    font-weight: 600;
+    font-size: 2.1rem;
+    text-transform: uppercase;
+}
+
+.game-modal button {
+    padding: 1.2rem 2.3rem;
+    width: 15rem;
+}
+
+@media (max-width: 782px) {
+    .container {
+        flex-direction: column;
+        padding: 3rem 1.5rem;
+        align-items: center;
+        gap: 0;
+    }
+
+    .hangman-box img {
+        max-width: 35vw;
+    }
+
+    .hangman-box h1 {
+        display: none;
+    }
+
+    .game-box {
+        transform: scale(0.75);
+        /* This scales everything in the .game-box by 75% */
+    }
+
+    .game-box h4 {
+        font-size: 2.9rem;
+        /* reduce the font-size */
+    }
+
+    .word-display .letter {
+        width: 2.5rem;
+        /* reduce the width */
+        font-size: 2rem;
+        /* reduce the font-size */
+    }
+
+    /* Adjust other properties as required */
+}
+
+@media screen and (min-width: 450px) and (max-width: 782px) {
+    .container {
+        transform: scale(0.9);
+    }
+
+    .hangman-box img {
+        max-width: 25vw;
+    }
+
+    .game-box h4 {
+        font-size: 2.9rem;
+        /* reduce the font-size */
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .game-box h4 {
+        font-size: 2.5rem;
+        /* reduce the font-size */
+    }
+
+}
