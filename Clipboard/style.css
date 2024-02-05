@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --linear-gradient: linear-gradient(45deg, rgba(2, 0, 36, 1) 0%, rgba(3, 3, 68, 1) 41%, rgb(0, 89, 107) 100%);
+    --Char-Black: hsl(204, 19%, 16%);
+    --Snow-White: #fffafa;
+    --forest-green: hsl(120, 61%, 14%);
+}
+
+html,
+body {
+    font-size: 62.5%;
+}
+
+.big-Container {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: var(--linear-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container input,
+.container textarea,
+.container button {
+    font-family: inherit;
+}
+
+.big-Container .container {
+    width: 42rem;
+    height: 53rem;
+    padding: 2.5rem;
+    background: var(--Snow-White);
+    border-radius: 1rem;
+    box-shadow: -15px 17px 25px 1px rgba(12, 213, 203, 0.387);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.big-Container .container h1 {
+    padding: 2rem 0;
+    color: var(--Char-Black);
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.big-Container .container .text-field {
+    width: 100%;
+    height: 23rem;
+    margin: 2rem 0;
+    padding: 1rem;
+    background: transparent;
+    border: 1px solid var(--Char-Black);
+    border-radius: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    outline: none;
+    resize: none;
+}
+
+.big-Container .container .copy-btn {
+    padding: 1rem 1.5rem;
+    color: var(--Snow-White);
+    width: 10rem;
+    background: var(--forest-green);
+    border-radius: 3rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.big-Container .container .copy-btn i {
+    padding-left: 1rem;
+}
+
+.big-Container .container .copy-btn:active {
+    transform: scale(0.98);
+}
+
+.big-Container .container .copy-btn:hover {
+    box-shadow: 0 0 20px 5px var(--forest-green);
+}
+
+.big-Container .container span.copied {
+    display: block;
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 2.6rem;
+    color: var(--Char-Black);
+    transition: all 0.5s;
+    transform: scale(0);
+}
+
+span.bounce-effect {
+    animation: bounceIn 1s linear;
+}
+
+
+/* Bounce in animation */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+
+    20% {
+        transform: scale(1.1);
+    }
+
+    40% {
+        transform: scale(0.9);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.03);
+    }
+
+    80% {
+        transform: scale(0.97);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Tablet (and larger mobile devices) */
+@media (max-width: 768px) {
+    .big-Container .container {
+        width: 35rem;
+        /* scaled down from 42rem */
+        height: 45rem;
+        /* scaled down from 53rem */
+        padding: 2rem;
+        /* scaled down from 2.5rem */
+        /* ... other styles ... */
+    }
+
+    .big-Container .container h1 {
+        font-size: 2.5rem;
+        /* scaled down from 3rem */
+        /* ... other styles ... */
+    }
+
+    .big-Container .container .text-field {
+        height: 20rem;
+        /* scaled down from 23rem */
+        font-size: 1.4rem;
+        /* scaled down from 1.6rem */
+        /* ... other styles ... */
+    }
+
+    .big-Container .container .copy-btn {
+        width: 9rem;
+        /* scaled down from 10rem */
+        font-size: 1.4rem;
+        /* scaled down from 1.6rem */
+        /* ... other styles ... */
+    }
+
+    .big-Container .container span.copied {
+        font-size: 2.2rem;
+        /* scaled down from 2.6rem */
+        /* ... other styles ... */
+    }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+    .big-Container .container {
+        width: 80%;
+        /* Use percentage for more fluid adaptation */
+        height: auto;
+        /* Adjust height automatically */
+        padding: 1.5rem;
+        /* further scaled down */
+        /* ... other styles ... */
+    }
+
+    .big-Container .container h1 {
+        font-size: 2rem;
+        /* further scaled down */
+        /* ... other styles ... */
+    }
+
+    .big-Container .container .text-field {
+        height: 10rem;
+        /* Adjust height automatically */
+        margin: 1rem 0;
+        /* Adjusted spacing */
+        font-size: 1.2rem;
+        /* further scaled down */
+        /* ... other styles ... */
+    }
+
+    .big-Container .container .copy-btn {
+        width: 40%;
+        /* Use percentage for more fluid adaptation */
+        font-size: 1.2rem;
+        /* further scaled down */
+        /* ... other styles ... */
+    }
+
+    .big-Container .container span.copied {
+        margin-top: 3rem;
+        /* Adjusted spacing */
+        font-size: 2rem;
+        /* further scaled down */
+        /* ... other styles ... */
+    }
+}
