@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Chokokutai&family=Turret+Road:wght@500&display=swap');
+
+:root {
+    /* Logo font */
+    font-family: 'Chokokutai', cursive;
+
+    /* quote font */
+    font-family: 'Turret Road', cursive;
+
+    --color-1: #013220;
+    --color-2: #384B41;
+    --color-3: #9BB0A5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 62.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--color-1);
+}
+
+.wrapper {
+    width: 60.5rem;
+    background: var(--color-3);
+    border-radius: 2rem;
+    padding: 3rem 3rem 2.5rem;
+}
+
+.wrapper header {
+    font-size: 3.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.wrapper .content {
+    margin: 3.5rem 0;
+}
+
+body>div>div.content>div.quote-Area>i {
+    font-size: 1.6rem;
+}
+
+body>div>div.content>div.quote-Area>i:first-child {
+    margin: .3rem 1rem 0 0;
+}
+
+body>div>div.content>div.quote-Area>i:last-child {
+    display: flex;
+    align-self: flex-end;
+    margin: 0px 0px .3rem 1rem;
+}
+
+.content .quote-Area {
+    display: flex;
+    justify-content: center;
+}
+
+.quote-Area .quote {
+    font-size: 2.2rem;
+    text-align: center;
+    /* word-break: break-all; */
+    font-family: 'Turret Road', cursive;
+}
+
+.content .author {
+    display: flex;
+    font-size: 1.8rem;
+    font-style: italic;
+    justify-content: flex-end;
+    margin: 2rem;
+}
+
+.author span:first-child {
+    margin: -0.7rem 0.5rem 0 0;
+    font-family: monospace;
+}
+
+.wrapper .buttons {
+    border-top: 3px solid var(--color-1);
+    border-radius: .7rem;
+}
+
+.buttons .features {
+    display: flex;
+    justify-content: space-between;
+    /* gap: 2rem; */
+    margin-top: 2.3rem;
+    align-items: center;
+}
+
+.features ul {
+    display: flex;
+}
+
+.features ul li {
+    list-style: none;
+    margin: 0 .5rem;
+    height: 4.7rem;
+    width: 4.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--color-1);
+    background-color: var(--color-3);
+    border: 2px solid var(--color-2);
+    font-size: 2.3rem;
+    cursor: pointer;
+}
+
+.features ul li:hover {
+    background-color: var(--color-2);
+    color: var(--color-3);
+}
+.features button {
+    outline: none;
+    cursor: pointer;
+    padding: 1.3rem 2.2rem;
+    border-radius: 2.7rem;
+    font-style: italic;
+    background-color: var(--color-2);
+    color: var(--color-3);
+    border: 2px solid var(--color-2);
+}
+button.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}

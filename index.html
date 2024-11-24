@@ -1,27 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
     <title>Document</title>
 </head>
-<body>
-    <h1>List Of Projects</h1>
-    <ul>
-        <li><a href="./Digital clock/index.html">Digital Clock</a></li>
-        <li><a href="./Hang Man/index.html">HangMan</a></li>
-        <li><a href="./Love Calculator/index.html">Love Calculator</a></li>
-        <li><a href="./Quiz App/index.html">Quiz App</a></li>
-        <li><a href="./Quote Genrator/index.html">Quote Generator</a></li>
-        <li><a href="./Tic Tac Toe/Index.html">Tic Tac Toe</a></li>
-        <li><a href="./To-Do List/Index.html">To do List</a></li>
-        <li><a href="./weather app/index.html">Weather App</a></li>
-         <li><a href="./Clipboard/Clipboard.html">Clipboard</a></li>
-         <li><a href="./Google Sign In/index.html">Google Sign In</a></li>
-        <li><a href="./Dicee Challenge - Starting Files/dicee.html">Dice Challenge</a></li>
-        <li><a href="./Drum Kit Starting Files/index.html">Drum Kit Challenge</a></li>
-        <li><a href="./Simon Game Challenge Starting Files/index.html">Simon Game Challenge</a></li>
-        <li><a href="./Dark mode/index.html">Dark Mode</a></li>
-    </ul>
+
+<body id="BigThing">
+    
+    <!-- Header -->
+    <header>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#banner">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <div id="particles-js-1"></div>
+        <section id="banner">
+            <div class="banner">
+                <div id="bg-1" class="bg bg-1"></div>
+                <div id="bg-2" class="bg bg-2"></div>
+                <div id="bg-3" class="bg bg-3"></div>
+                <h1 id="toggle" onclick="toggle()">D.EVIL</h1>
+                <div id="bg-4" class="bg bg-4"></div>
+                <div id="bg-5" class="bg bg-5"></div>
+                <div id="bg-6" class="bg bg-6"></div>
+                <div id="bg-7" class="bg bg-7"></div>
+                <div id="bg-8" class="bg bg-8"></div>
+                <div id="bg-9" class="bg bg-9"></div>
+            </div>
+        </section>
+
+        <div id="particles-js-2"></div>
+        <section id="about">
+            <div class="about-container">
+                <div class="details">
+                    <h1>Hi, I&apos;m <span>Devesh Hirwey</span></h1>
+                    <p id="auto-type">I'm a passionate and creative web developer with a focus on front-end development.
+                        I have a strong understanding of HTML, CSS, JavaScript, React, Sveltekit, Next.js, Tailwind,
+                        Express.js, and Node.js. I also have some experience with design tools like Canva, Photoshop,
+                        and Figma.</p>
+                </div>
+                <div class="img-container">
+                    <img src="assets/image/FaceArt.png" alt="my cartoonish face">
+                    <button id="test"></button>
+                </div>
+            </div>
+        </section>
+
+        <div id="particles-js-3"></div>
+        <section id="projects">
+            <div class="container">
+                <!-- carousel -->
+                <div class="carousel">
+                    <!-- list item -->
+                    <div class="list">
+                    </div>
+
+
+
+                    <!-- list thumb333nail -->
+                    <!-- <div class="thumbnail">
+                    </div> -->
+
+
+                    <!-- time running -->
+                    <div class="time"></div>
+
+                </div>
+                <!-- next prev -->
+                <div class="arrows">
+                    <button id="prev">
+                        Prev
+                    </button>
+                    <button id="next">
+                        Next
+                    </button>
+                </div>
+            </div>
+
+
+        </section>
+
+        <footer>
+            <ul class="social-icons">
+                <li><a href="https://github.com/Devesh-Hirwey"><ion-icon name="logo-github"></ion-icon></a></li>
+                <li><a href="https://www.instagram.com/deveshhirwey?utm_source=qr&igsh=MXZyeHB0cjYyNHo4bA=="><ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href="https://www.linkedin.com/in/devesh-hirwey-7b7341236/"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+            </ul>
+            <p>&copy; Devesh hirwey</p>
+            <div>
+                <img class="wave" src="assets/footer/Wave.png" alt="">
+            </div>
+        </footer>
+    </main>
+
+
+
+
+
+
+    <!-- JavaScript -->
+    <script src="JavaScript/particles.js"></script>
+
+    <script src="JavaScript/Parallax.js"></script>
+    <script src="JavaScript/Index.js"></script>
+    <script src="JavaScript/carousel.js"></script>
+
+    <script src="JavaScript/about.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </body>
+
 </html>

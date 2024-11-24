@@ -1,0 +1,203 @@
+{
+    "list": [
+        {
+            "image": "assets/image/ClipBoard.png",
+            "author": "D.EVIL DEV",
+            "title": "Clipboard Landing Page",
+            "topic": "Utility",
+            "Link": "Projects/ClipBoard/ClipBoard.html",
+            "description": "A responsive landing page with a clean design, built using HTML and CSS. Features a sticky navigation bar and smooth scrolling."
+        },
+        {
+            "image": "assets/image/DarkModeGame.png",
+            "author": "D.EVIL DEV",
+            "title": "Dark Mode Game",
+            "topic": "GAME",
+            "Link": "Games/Dark-mode/index.html",
+            "description": "A simple game with a dark mode toggle, demonstrating the use of JavaScript to manipulate CSS styles and create interactive elements."
+        },
+        {
+            "image": "assets/image/DiceChallenge.png",
+            "author": "D.EVIL DEV",
+            "title": "Dice Challenge Game",
+            "topic": "GAME",
+            "Link": "Games/Dice/dicee.html",
+            "description": "A two-player dice game where players roll dice and the highest roller wins. Built with HTML, CSS, and JavaScript for game logic and dynamic content updates."
+        },
+        {
+            "image": "assets/image/DigitalClock.png",
+            "author": "D.EVIL DEV",
+            "title": "Digital Clock with Date",
+            "topic": "Utility",
+            "Link": "Projects/Digital-clock/index.html",
+            "description": "A dynamic digital clock displaying the current time and date, updated in real-time using JavaScript's date and time functions."
+        },
+        {
+            "image": "assets/image/DrumChallenge.png",
+            "author": "D.EVIL DEV",
+            "title": "Drum Kit Challenge",
+            "topic": "GAME",
+            "Link": "Games/Drum/index.html",
+            "description": "An interactive drum kit simulator that plays sounds when keys are pressed. Utilizes JavaScript for event handling and audio playback."
+        },
+        {
+            "image": "assets/image/GoogleSignInCopy.png",
+            "author": "D.EVIL DEV",
+            "title": "Google Sign-In Clone",
+            "topic": "Clone",
+            "Link": "Projects/Google-Sign-In/index.html",
+            "description": "A recreation of the Google sign-in page using HTML and CSS, focusing on replicating the layout and design elements."
+        },
+        {
+            "image": "assets/image/Hangman.png",
+            "author": "D.EVIL DEV",
+            "title": "Hangman Game",
+            "topic": "GAME",
+            "Link": "Games/Hang-Man/index.html",
+            "description": "A classic hangman word-guessing game built with JavaScript.  Players guess letters to reveal a hidden word before the hangman figure is complete."
+        },
+        {
+            "image": "assets/image/LoveCalculator.png",
+            "author": "D.EVIL DEV",
+            "title": "Love Calculator",
+            "topic": "GAME",
+            "Link": "Games/Love-Calculator/index.html",
+            "description": "A fun love calculator that calculates a compatibility score between two names using a simple algorithm implemented in JavaScript."
+        },
+        {
+            "image": "assets/image/QuizApp.png",
+            "author": "D.EVIL DEV",
+            "title": "Interactive Quiz App",
+            "topic": "Utility",
+            "Link": "Projects/Quiz-App/index.html",
+            "description": "A quiz application with multiple-choice questions and scoring functionality, built using JavaScript for dynamic question handling and user interaction."
+        },
+        {
+            "image": "assets/image/QuoteApp.png",
+            "author": "D.EVIL DEV",
+            "title": "Random Quote Generator",
+            "topic": "Utility",
+            "Link": "Projects/Quote-Genrator/index.html",
+            "description": "A web app that displays random quotes fetched from an API. Uses JavaScript for asynchronous data fetching and DOM manipulation."
+        },
+        {
+            "image": "assets/image/SimonGame.png",
+            "author": "D.EVIL DEV",
+            "title": "Simon Memory Game",
+            "topic": "GAME",
+            "Link": "Games/Simon/index.html",
+            "description": "A classic Simon memory game where players repeat a sequence of lights and sounds. Implemented using JavaScript for game logic, timing, and user input."
+        },
+        {
+            "image": "assets/image/TicTacToe.png",
+            "author": "D.EVIL DEV",
+            "title": "Tic-Tac-Toe Game",
+            "topic": "GAME",
+            "Link": "Games/Tic-Tac-Toe/index.html",
+            "description": "A classic Tic-Tac-Toe game for two players, built with HTML, CSS, and JavaScript to handle game logic and determine the winner."
+        },
+        {
+            "image": "assets/image/TodoApp.png",
+            "author": "D.EVIL DEV",
+            "title": "To-Do List Application",
+            "topic": "Utility",
+            "Link": "Projects/To-Do/index.html",
+            "description": "A simple to-do list app that allows users to add, remove, and mark tasks as complete. Uses JavaScript for DOM manipulation and local storage to save tasks."
+        },
+        {
+            "image": "assets/image/WeatherApp.png",
+            "author": "D.EVIL DEV",
+            "title": "Weather App",
+            "topic": "Utility",
+            "Link": "Projects/weather-app/index.html",
+            "description": "A weather application that fetches weather data from an API and displays it to the user. Utilizes JavaScript for API calls, data processing, and dynamic content updates."
+        }
+    ],
+    "thumbnail": [
+        {
+            "image": "assets/image/ClipBoard.png",
+            "title": "Clipboard Landing Page",
+            "description": "Responsive landing page with sticky navigation."
+        },
+        {
+            "image": "assets/image/DarkModeGame.png",
+            "title": "Dark Mode Game",
+            "description": "Simple game with a dark mode toggle."
+        },
+        {
+            "image": "assets/image/DiceChallenge.png",
+            "title": "Dice Challenge Game",
+            "description": "Two-player dice game with dynamic updates."
+        },
+        {
+            "image": "assets/image/DigitalClock.png",
+            "title": "Digital Clock with Date",
+            "description": "Real-time clock with date display."
+        },
+        {
+            "image": "assets/image/DrumChallenge.png",
+            "title": "Drum Kit Challenge",
+            "description": "Interactive drum kit simulator."
+        },
+        {
+            "image": "assets/image/GoogleSignInCopy.png",
+            "title": "Google Sign-In Clone",
+            "description": "Recreation of Google's sign-in page."
+        },
+        {
+            "image": "assets/image/Hangman.png",
+            "title": "Hangman Game",
+            "description": "Classic hangman word-guessing game."
+        },
+        {
+            "image": "assets/image/LoveCalculator.png",
+            "title": "Love Calculator",
+            "description": "Calculates compatibility between names."
+        },
+        {
+            "image": "assets/image/QuizApp.png",
+            "title": "Interactive Quiz App",
+            "description": "Quiz app with multiple-choice questions."
+        },
+        {
+            "image": "assets/image/QuoteApp.png",
+            "title": "Random Quote Generator",
+            "description": "Displays random quotes from an API."
+        },
+        {
+            "image": "assets/image/SimonGame.png",
+            "title": "Simon Memory Game",
+            "description": "Classic Simon memory game with lights and sounds."
+        },
+        {
+            "image": "assets/image/TicTacToe.png",
+            "title": "Tic-Tac-Toe Game",
+            "description": "Classic Tic-Tac-Toe for two players."
+        },
+        {
+            "image": "assets/image/TodoApp.png",
+            "title": "To-Do List Application",
+            "description": "Add, remove, and mark tasks as complete."
+        },
+        {
+            "image": "assets/image/WeatherApp.png",
+            "title": "Weather App",
+            "description": "Fetches and displays weather data."
+        }
+    ],
+    "about": [
+        {
+            "para": "A passionate and creative web developer with a focus on front-end development. I have a strong understanding of HTML, CSS, JavaScript, React, Sveltekit, Next.js, Tailwind, Express.js, and Node.js. I also have some experience with design tools like Canva, Photoshop, and Figma."
+        },
+        {
+            "para": "My passion for video games drives me to create interactive and engaging web experiences. I'm always looking for ways to incorporate innovative design elements and user-friendly interactions into my work."
+        },
+        {
+            "para": "A highly creative and detail-oriented individual with a strong work ethic. I'm also a quick learner and can adapt to new technologies and frameworks quickly."
+        }
+        ,
+        {
+            "para": "My career goal is to continue to develop my skills and work on challenging and exciting projects in the field of web development. I'm particularly interested in working on projects that involve creating interactive experiences for users."
+        }
+    ]
+}

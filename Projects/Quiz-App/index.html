@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="./CSS/style.css">
+
+    <!-- Font Awesome Style sheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- JavaScript Sheet -->
+    <script src="./JavaScript/script.js" defer></script>
+    <script src="./JavaScript/questions.js" defer></script>
+
+    <title>Quiz App</title>
+</head>
+
+<body>
+    <!-- NavBar Starts Here -->
+    <nav>
+        <div class="logo">
+            <h1>D.Poet</h1>
+        </div>
+        <div class="openMenu">
+            <i class="fa fa-bars"></i>
+        </div>
+        <ul class="mainMenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#product">Product</a></li>
+            <div class="closeMenu">
+                <i class="fa fa-times"></i>
+            </div>
+            <span class="icons">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-discord"></i>
+                <i class="fab fa-github"></i>
+            </span>
+        </ul>
+
+    </nav>
+    <!-- NavBar Ends Here -->
+
+    <!-- Main Body Here -->
+    <main>
+        <section>
+
+            <!-- Quiz Layout Starts Here -->
+            <div class="app">
+                <h1>Simple Quiz</h1>
+                <div class="quiz">
+                    <h2 id="question">Question goes here:</h2>
+                    <div id="answer-buttons">
+                        <button class="btn">Answer 1</button>
+                        <button class="btn">Answer 2</button>
+                        <button class="btn">Answer 3</button>
+                        <button class="btn">Answer 4</button>
+                    </div>
+                    <div class="quiz-controls"> <!-- Wrap both buttons in a control container for better positioning -->
+                        <button id="previous-button">Previous</button>
+                        <button id="next-button">Next</button>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Quiz Layout Ends Here -->
+
+            <!-- Popup and Overlay Starts here -->
+            <div id="popup" style="display:none;">  <!-- Initially hidden. We'll use JavaScript to show it -->
+                <img src="/assets/clapping-yay.gif" alt="Congratulatory GIF">
+                <h1>Congratulations on finishing the Quiz, here's your score board:</h1>
+                <h2 id="score">Your score: 0/0</h2>  <!-- Default format that will be updated by JavaScript -->
+                <h3 id="correct-answers">Correct answers: 0</h3>  <!-- Placeholder for number of correct answers -->
+                <h3 id="wrong-answers">Wrong answers: 0</h3>  <!-- Placeholder for number of wrong answers -->
+                <button id="refresh-button">Restart Quiz</button>
+            </div>
+            <div class="overlay" style="display: none;"></div>
+            <!-- Popup and Overlay Ends here -->
+            
+        </section>
+    </main>
+
+    <!-- Footer Starts Here -->
+<footer>
+    <div class="footer-content">
+        <p>© 2023 D.Poet. All rights reserved.</p>
+        <p>Unauthorized duplication or distribution is strictly prohibited.</p>
+    </div>
+</footer>
+<!-- Footer Ends Here -->
+
+</body>
+
+</html>
