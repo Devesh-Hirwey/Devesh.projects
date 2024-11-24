@@ -101,7 +101,7 @@
             "author": "D.EVIL DEV",
             "title": "To-Do List Application",
             "topic": "Utility",
-            "Link": "Projects/To-Do/index.html",
+            "Link": "Projects/To-Do/Index.html",
             "description": "A simple to-do list app that allows users to add, remove, and mark tasks as complete. Uses JavaScript for DOM manipulation and local storage to save tasks."
         },
         {
