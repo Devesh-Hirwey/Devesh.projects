@@ -93,7 +93,7 @@
             "author": "D.EVIL DEV",
             "title": "Tic-Tac-Toe Game",
             "topic": "GAME",
-            "Link": "Games/Tic-Tac-Toe/index.html",
+            "Link": "Games/Tic-Tac-Toe/Index.html",
             "description": "A classic Tic-Tac-Toe game for two players, built with HTML, CSS, and JavaScript to handle game logic and determine the winner."
         },
         {
