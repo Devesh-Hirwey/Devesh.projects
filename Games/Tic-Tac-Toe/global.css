@@ -1,0 +1,586 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main: #140d1f;
+    --secondary: rgb(215, 243, 250);
+    --third: #198da2;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+body {
+    background: var(--main);
+}
+
+main {
+    margin-top: 10rem;
+}
+section {
+    height: 120svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Mode Selection */
+
+#selectMode {
+    background: var(--third);
+    min-width: 40svw;
+    max-width: 80svw;
+    width: 70%;
+    height: 80svh;
+    padding: 2rem;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#selectMode>h1 {
+    font-size: clamp(3rem, 12vw, 6.9rem);
+    color: var(--main);
+    font-style: bold;
+    text-transform: uppercase;
+    text-align: center;
+    user-select: none;
+    flex-grow: 5;
+}
+
+#modeBtn {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-grow: 1;
+    gap: 1rem;
+}
+
+/* Coin Toss Game */
+
+.CoinTossContainer {
+    background: var(--main);
+    max-width: 80svw;
+    min-width: 40svw;
+    width: 50%;
+    height: 75svh;
+    padding: 1.5rem;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 55%;
+    left: 50%;
+    box-shadow: 2.5rem 3.0rem 3.5rem rgba(0, 0, 0, 0.7), 1.5rem 2rem 2.5rem rgba(0, 0, 0, 0.5), 0.5rem 1rem 1.5rem rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    -webkit-perspective: 30rem;
+    perspective: 30rem;
+    display: none;
+}
+
+.coin {
+    height: 15rem;
+    width: 15rem;
+    position: relative;
+    margin: 32px auto;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.coin img {
+    width: 14.5rem;
+}
+
+.heads,
+.tails {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.tails {
+    transform: rotateX('180deg');
+}
+
+@keyframes spin-tails {
+    0% {
+        transform: rotateX(0);
+    }
+
+    100% {
+        transform: rotateX(2160deg);
+    }
+}
+
+@keyframes spin-heads {
+    0% {
+        transform: rotateX(0);
+    }
+
+    100% {
+        transform: rotateX(2520deg);
+    }
+}
+
+/* Flex */
+.result {
+    display: none;
+    flex-direction: column;
+    color: var(--secondary);
+    font-weight: 500;
+    border-radius: 2.5rem;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.result>p {
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.CoinTossContainer>.container {
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+}
+
+.CoinTossContainer>.container>h2 {
+    margin-bottom: .7rem;
+}
+
+#continueBtn {
+    display: block;
+    text-align: center;
+}
+
+/* Flex */
+#choiceBtn {
+    display: flex;
+    gap: 7rem;
+    align-items: center;
+}
+
+#choiceBtn .buttons {
+    display: flex;
+    gap: 3rem;
+}
+
+@media (max-width: 426px) {
+    .result>p {
+        font-size: 2rem;
+    }
+
+    #choiceBtn {
+        font-size: 1.4rem;
+    }
+
+    #choiceBtn .buttons {
+        flex-direction: column;
+    }
+}
+
+/* Tic Tac Toe Here */
+#Game-heading {
+    font-size: 3rem;
+    color: var(--secondary);
+    display: none;
+    margin-bottom: 2rem;
+}
+.gameContainer {
+    display: none;
+    justify-content: center;
+    width: 80svw;
+    height: 80svh;
+}
+
+.gameContainer>.container {
+    display: grid;
+    grid-template-rows: repeat(3, 10svw);
+    grid-template-columns: repeat(3, 10svw);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+.box {
+    border: 2px solid var(--secondary);
+    font-size: 8svw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary);
+}
+
+.box:hover {
+    background-color: var(--secondary);
+    color: var(--main);
+}
+
+.info {
+    font-size: 22px;
+}
+
+.gameInfo {
+    padding: 0 34px;
+    font-family: 'Baloo Bhaina 2', cursive;
+    color: var(--secondary);
+}
+
+.gameInfo h1 {
+    font-size: 2.5rem;
+}
+
+.imgbox {
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 3s;
+    /* Transition the opacity property */
+}
+
+.br-0 {
+    border-right: 0;
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+#stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#gameButtons{
+    margin-top: 2rem;
+    margin-left: 7rem;
+    display: flex;
+    gap: 7rem;
+}
+#music-ground{
+    margin-top: 2rem;
+    margin-left: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.line {
+    height: .5rem;
+    width: 0;
+    position: absolute;
+    background-color: var(--secondary);
+    box-shadow: 0 0 1.5rem var(--secondary);
+    transition: width 1s ease-in-out;
+    display: block;
+    border-radius: 2rem;
+}
+
+#line1 {
+    width: 25vw;
+    transform: translate(2vw, 5vw) rotate(0deg);
+    z-index: 20;
+    display: none;
+}
+
+#line2 {
+    width: 25vw;
+    transform: translate(2vw, 15vw) rotate(0deg);
+    z-index: 20;
+    display: none;
+}
+
+#line3 {
+    width: 25vw;
+    transform: translate(2vw, 25vw) rotate(0deg);
+    z-index: 20;
+    display: none;
+}
+
+#line5 {
+    width: 27vw;
+    transform: translate(1vw, 15vw) rotate(90deg);
+    z-index: 20;
+    display: none;
+}
+
+#line4 {
+    width: 27vw;
+    transform: translate(-8vw, 15vw) rotate(90deg);
+    z-index: 20;
+    display: none;
+}
+
+#line6 {
+    width: 27vw;
+    transform: translate(10vw, 15vw) rotate(90deg);
+    z-index: 20;
+    display: none;
+}
+
+#line8 {
+    width: 40vw;
+    transform: translate(-5vw, 15vw) rotate(135deg);
+    z-index: 20;
+    display: none;
+}
+
+#line7 {
+    width: 40vw;
+    transform: translate(-5vw, 15vw) rotate(224deg);
+    z-index: 20;
+    display: none;
+}
+
+@media (max-width: 426px) {
+    .gameContainer {
+        flex-direction: column;
+        margin-top: 7rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gameInfo {
+        text-align: center;
+        margin-top: 4rem;
+    }
+
+    .imgbox {
+        width: 40vw;
+        margin-left: 14rem;
+    }
+
+    .gameContainer .container {
+        display: grid;
+        grid-template-rows: repeat(3, 17svw);
+        grid-template-columns: repeat(3, 17svw);
+        font-family: 'Roboto', sans-serif;
+        position: relative;
+        margin-top: 25rem;
+    }
+
+    .box {
+        font-size: 5rem;
+    }
+
+    #line1 {
+        width: 50svw;
+        transform: translate(2vw, 8vw) rotate(0deg);
+        z-index: 20;
+        display: none;
+    }
+
+    #line2 {
+        width: 50svw;
+        transform: translate(2vw, 25svw) rotate(0deg);
+        z-index: 20;
+        display: none;
+    }
+
+    #line3 {
+        width: 50svw;
+        transform: translate(2vw, 42svw) rotate(0deg);
+        z-index: 20;
+        display: none;
+    }
+
+    #line5 {
+        width: 50svw;
+        transform: translate(1vw, 25vw) rotate(90deg);
+        z-index: 20;
+        display: none;
+    }
+
+    #line4 {
+        width: 50svw;
+        transform: translate(-17vw, 25vw) rotate(90deg);
+        z-index: 20;
+        display: none;
+    }
+
+    #line6 {
+        width: 50svw;
+        transform: translate(17svw, 25svw) rotate(90deg);
+        z-index: 20;
+        display: none;
+    }
+
+    #line8 {
+        width: 65svw;
+        transform: translate(-7svw, 24svw) rotate(134deg);
+        z-index: 20;
+        display: none;
+    }
+
+    #line7 {
+        width: 65svw;
+        transform: translate(-8svw, 23vw) rotate(226deg);
+        z-index: 20;
+        display: none;
+    }
+}
+
+
+/* NavBar */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 20;
+}
+
+header>nav {
+    position: fixed;
+    top: 0;
+    width: 40%;
+    height: 8rem;
+    background: rgba(215, 243, 250, 0.85);
+    opacity: 100%;
+    padding: 0 .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 1rem;
+}
+
+header>nav>ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+header>nav>ul>li {
+    list-style: none;
+}
+
+header>nav>ul>li>a {
+    color: var(--main);
+    padding: 1rem;
+    font-size: 2rem;
+    border-radius: 2rem;
+    font-family: 'Drip';
+    transition: 0.5s;
+}
+
+header>nav>ul>li>a:hover {
+    text-shadow: 0 0 3rem var(--secondary);
+    background-color: var(--main);
+    color: var(--secondary);
+    font-size: 2.5rem;
+}
+
+.hidden {
+    top: -100px;
+    /* Adjust this value to match your navbar height */
+    position: fixed;
+    transition: top 0.3s ease-in-out;
+    /* Add a smooth transition */
+}
+
+/* Footer */
+
+
+footer {
+    width: 100%;
+    height: 30svh;
+    position: relative;
+    padding: 0;
+    margin-top: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-left: -7rem;
+}
+.social-icons > li {
+    list-style: none;
+}
+.social-icons > li > a {
+    color: var(--secondary-color);
+    font-size: 3.2rem;
+    transition: .6s ease-in;
+}
+
+.social-icons > li > a:hover {
+    font-size: 4rem;
+    color: antiquewhite;
+}
+footer > p {
+    font-size: 1.5rem;
+    color: aliceblue;
+    overflow: hidden;
+}
+
+footer .wave {
+    position: absolute;
+    bottom: 0;
+    height: 65svh;
+    width: 100%;
+    image-resolution: 1080px;
+    left: 0;
+    opacity: 1;
+    z-index: -5;
+}
+
+/* Media Queries */
+/* Navbar */
+@media (max-width: 769px) {
+    header>nav {
+        height: 4rem;
+    }
+
+    header>nav>ul>li>a {
+        font-size: 1.5rem;
+        padding: 0;
+    }
+
+    header>nav>ul>li>a:hover {
+        font-size: 2rem;
+        background-color: transparent;
+    }
+}
+
+@media (max-width: 430px) {
+    header>nav {
+        height: 4rem;
+        width: 80%;
+    }
+
+    header>nav>ul>li>a {
+        font-size: 1rem;
+        padding: 0;
+    }
+
+    header>nav>ul>li>a:hover {
+        font-size: 1.5rem;
+        background-color: transparent;
+    }
+}

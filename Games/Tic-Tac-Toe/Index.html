@@ -3,48 +3,208 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="goku.css">
+    <title>Document</title>
 </head>
 
 <body>
-    <nav class="Navbar">
-        <ul>
-            <li>TicTacToe</li>
-        </ul>
-    </nav>
-    <div class="gameContainer">
+    <!-- Header -->
+    <header>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#banner">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <div class="container">
-            <div class="line"></div>
-            <div class="box bt-0 bl-0"><span class="boxtext"></span></div>
-            <div class="box bt-0"><span class="boxtext"></span></div>
-            <div class="box bt-0 br-0"><span class="boxtext"></span></div>
-            <div class="box bl-0"><span class="boxtext"></span></div>
-            <div class="box"><span class="boxtext"></span></div>
-            <div class="box br-0"><span class="boxtext"></span></div>
-            <div class="box bb-0 bl-0"><span class="boxtext"></span></div>
-            <div class="box bb-0"><span class="boxtext"></span></div>
-            <div class="box br-0 bb-0"><span class="boxtext"></span></div>
-        </div>
-        <div class="gameInfo">
-            <h1>Welcome to Tic Tac Toe</h1>
-            <div>
-                <ul>
-                    <span class="info">Turn for X</span>
-                </ul>
-                <ul>
-                    <button id="reset">Reset</button>
-                </ul>
+    <main>
+        <section>
+
+
+            <!-- Mode Selection -->
+            <div class="" id="selectMode">
+                <h1>select game mode <br>(｀∀´)Ψ</h1>
+                <div class="" id="modeBtn">
+                    <div class="" id="AIbutton">
+                        <button class="wild-west-button">
+                            <span class="wild-west-button__content">
+                                <svg class="wild-west-button__icon" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2L9.09 5H4v4.09L1 12l3 2.91V19h5.09L12 22l2.91-3H20v-5.09L23 12l-3-2.91V5h-5.09L12 2zm0 4.5a5.5 5.5 0 110 11 5.5 5.5 0 010-11zm0 2a3.5 3.5 0 100 7 3.5 3.5 0 000-7z">
+                                    </path>
+                                </svg>
+                                <span class="wild-west-button__text">Against AI</span>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="" id="Single-player-button">
+                        <button class="wild-west-button">
+                            <span class="wild-west-button__content">
+                                <svg class="wild-west-button__icon" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2L9.09 5H4v4.09L1 12l3 2.91V19h5.09L12 22l2.91-3H20v-5.09L23 12l-3-2.91V5h-5.09L12 2zm0 4.5a5.5 5.5 0 110 11 5.5 5.5 0 010-11zm0 2a3.5 3.5 0 100 7 3.5 3.5 0 000-7z">
+                                    </path>
+                                </svg>
+                                <span class="wild-west-button__text">With Friend</span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="imageBox">
-                <img src="yay-hooray.gif" alt="">
+
+            <!-- Coin Toss Game -->
+            <div class="CoinTossContainer">
+                <div class="coin" id="coin">
+                    <div class="heads">
+                        <img src="assets/Images/Head.png" alt="">
+                    </div>
+                    <div class="tails">
+                        <img src="assets/Images/Tails.png" alt="">
+                    </div>
+                </div>
+
+                <div class="result">
+                    <p>Result: <span id="result"></span> <br> You: <span id="Outcome"></span></p>
+                    <div id="continueBtn">
+                        <button class="wild-west-button" disabled>
+                            <span class="wild-west-button__content">
+                                <svg class="wild-west-button__icon" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2L9.09 5H4v4.09L1 12l3 2.91V19h5.09L12 22l2.91-3H20v-5.09L23 12l-3-2.91V5h-5.09L12 2zm0 4.5a5.5 5.5 0 110 11 5.5 5.5 0 010-11zm0 2a3.5 3.5 0 100 7 3.5 3.5 0 000-7z">
+                                    </path>
+                                </svg>
+                                <span class="wild-west-button__text">Continue</span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="container" id="choiceBtn">
+                    <h2>Pick your side:</h2>
+                    <div class="buttons">
+                        <button id="headBtn">HEAD</button>
+                        <button id="tailsBtn">TAILS</button>
+                    </div>
+                </div>
+
+
             </div>
-        </div>
-    </div>
-    <script src="script.js"></script>
+
+            <h1 id="Game-heading">Welcome to X&apos; and O&apos; Showdown</h1>
+            <div class="gameContainer">
+                <div class="container">
+
+                </div>
+                <div class="gameInfo">
+                    <div>
+                        <div class="" id="stats">
+                            <h2>Turn for: <span id="Turn"></span></h2>
+                            <h2 style="display: none;" id="winnerBox"><span id="winner"></span> has Won</h2>
+                            <h2>Mode: <span id="mode"></span></h2>
+                            <h2>Score of X: <span id="xScore">0</span></h2>
+                            <h2>Score of O: <span id="oScore">0</span></h2>
+                        </div>
+                        <div id="gameButtons">
+                            <button id="playAgain">PlayAgain
+                                <div id="clip">
+                                    <div id="leftTop" class="corner"></div>
+                                    <div id="rightBottom" class="corner"></div>
+                                    <div id="rightTop" class="corner"></div>
+                                    <div id="leftBottom" class="corner"></div>
+                                </div>
+                                <span id="rightArrow" class="arrow"></span>
+                                <span id="leftArrow" class="arrow"></span>
+                            </button>
+                            <button id="reset">Reset
+                                <div id="clip">
+                                    <div id="leftTop" class="corner"></div>
+                                    <div id="rightBottom" class="corner"></div>
+                                    <div id="rightTop" class="corner"></div>
+                                    <div id="leftBottom" class="corner"></div>
+                                </div>
+                                <span id="rightArrow" class="arrow"></span>
+                                <span id="leftArrow" class="arrow"></span>
+                            </button>
+                        </div>
+                        <div id="music-ground">
+                            <h2>Play Back Ground Music</h2>
+                            <button id="backGroundMusic">
+                                <label class="playbtn">
+                                    <input type="checkbox" checked="checked" />
+
+
+                                    <svg class="pause" xmlns="http://www.w3.org/2000/svg" height="1em"
+                                        viewBox="0 0 320 512">
+                                        <path
+                                            d="M48 64C21.5 64 0 85.5 0 112V400c0 26.5 21.5 48 48 48H80c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zm192 0c-26.5 0-48 21.5-48 48V400c0 26.5 21.5 48 48 48h32c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H240z">
+                                        </path>
+                                    </svg>
+
+                                    <svg class="play" xmlns="http://www.w3.org/2000/svg" height="1em"
+                                        viewBox="0 0 384 512">
+                                        <path
+                                            d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z">
+                                        </path>
+                                    </svg>
+
+                                </label>
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="imgbox">
+                        <div class="notification">
+                            <div id="goku">
+                                <div class="head"></div>
+                                <div class="body"></div>
+                                <div class="leg"></div>
+                                <div class="shadow"></div>
+                            </div>
+
+                            <span class="dirt">
+
+                                <div class="text">
+                                    <span class="font hover">Game Over!</span>
+                                    <span class="font-text hover">The Power level it&apos; over</span>
+                                    <span class="font-power hover">+9000!</span>
+                                </div>
+                                <div class="parchment">
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <!-- <footer>
+                <ul class="social-icons">
+                    <li><a href="https://github.com/Devesh-Hirwey"><ion-icon name="logo-github"></ion-icon></a></li>
+                    <li><a href="https://www.instagram.com/deveshhirwey?utm_source=qr&igsh=MXZyeHB0cjYyNHo4bA=="><ion-icon name="logo-instagram"></ion-icon></a></li>
+                    <li><a href="https://www.linkedin.com/in/devesh-hirwey-7b7341236/"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                </ul>
+                <p>&copy; Devesh hirwey</p>
+                <div>
+                    <img class="wave" src="assets/footer/Wave.png" alt="">
+                </div>
+            </footer> -->
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+    <script src="cointToss.js"></script>
+    <script type="module" src="TicTacToe.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,510 @@
+.wild-west-button {
+    position: relative;
+    width: 25rem;
+    /* transform: translate(-50%, -50%); */
+    padding: 1.5rem 3rem;
+    font-size: 2.4rem;
+    color: #f1dabb;
+    background: linear-gradient(45deg, #8b4513, #a0522d);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.3),
+        inset 0 -5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.wild-west-button:disabled {
+    background: black;
+    user-select: none;
+}
+
+.wild-west-button:disabled::after,
+.wild-west-button:disabled::before {
+    display: none;
+}
+
+.wild-west-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.3;
+}
+
+.wild-west-button:hover {
+    transform: translate(0, 0) scale(1.05);
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.4),
+        inset 0 -5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.wild-west-button:active {
+    transform: translate(0, 0) scale(0.95);
+    box-shadow:
+        0 5px 10px rgba(255, 255, 255, 0.3),
+        inset 0 -3px 5px rgba(255, 255, 255, 0.2);
+}
+
+.wild-west-button__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wild-west-button__icon {
+    width: 40%;
+    max-width: 3rem;
+    max-height: 3rem;
+    margin-right: 1rem;
+    fill: #f1dabb;
+    transition: transform 0.3s ease;
+}
+
+.wild-west-button:hover .wild-west-button__icon {
+    transform: rotate(360deg) scale(1.2);
+}
+
+.wild-west-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent);
+    background-size: 200% 100%;
+    animation: wild-west-button-shine 3s linear infinite;
+}
+
+@keyframes wild-west-button-shine {
+    0% {
+        background-position: 200% 50%;
+    }
+
+    100% {
+        background-position: -200% 50%;
+    }
+}
+
+
+@media (max-width: 769px) {
+    .wild-west-button {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 426px) {
+    #modeBtn {
+        flex-direction: column;
+    }
+}
+
+
+/* From Uiverse.io by 212004ALJI */
+/*  Choices Button */
+.CoinTossContainer>.container>.buttons>button,
+.CoinTossContainer>.buttons>button::after {
+    padding: 1rem 5rem;
+    font-size: 2rem;
+    border: none;
+    border-radius: .5rem;
+    color: white;
+    background-color: transparent;
+    position: relative;
+}
+
+.CoinTossContainer>.container>.buttons>button::after {
+    --move1: inset(50% 50% 50% 50%);
+    --move2: inset(31% 0 40% 0);
+    --move3: inset(39% 0 15% 0);
+    --move4: inset(45% 0 40% 0);
+    --move5: inset(45% 0 6% 0);
+    --move6: inset(14% 0 61% 0);
+    clip-path: var(--move1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+}
+
+#headBtn,
+#headBtn::after {
+    content: 'HEADS';
+}
+
+#tailsBtn,
+#tailsBtn::after {
+    content: 'TAILS';
+}
+
+.CoinTossContainer>.container>.buttons>button:hover::after {
+    animation: glitch_4011 1s;
+    text-shadow: 10 10px 10px black;
+    animation-timing-function: steps(2, end);
+    text-shadow: -3px -3px 0px #1df2f0, 3px 3px 0px #E94BE8;
+    background-color: transparent;
+    border: 3px solid rgb(0, 255, 213);
+}
+
+.CoinTossContainer>.container>.buttons>button:hover {
+    text-shadow: -1px -1px 0px #1df2f0, 1px 1px 0px #E94BE8;
+}
+
+.CoinTossContainer>.container>.buttons>button:hover {
+    background-color: transparent;
+    border: 1px solid rgb(0, 255, 213);
+    box-shadow: 0px 10px 10px -10px rgb(0, 255, 213);
+}
+
+@keyframes glitch_4011 {
+    0% {
+        clip-path: var(--move1);
+        transform: translate(0px, -10px);
+    }
+
+    10% {
+        clip-path: var(--move2);
+        transform: translate(-10px, 10px);
+    }
+
+    20% {
+        clip-path: var(--move3);
+        transform: translate(10px, 0px);
+    }
+
+    30% {
+        clip-path: var(--move4);
+        transform: translate(-10px, 10px);
+    }
+
+    40% {
+        clip-path: var(--move5);
+        transform: translate(10px, -10px);
+    }
+
+    50% {
+        clip-path: var(--move6);
+        transform: translate(-10px, 10px);
+    }
+
+    60% {
+        clip-path: var(--move1);
+        transform: translate(10px, -10px);
+    }
+
+    70% {
+        clip-path: var(--move3);
+        transform: translate(-10px, 10px);
+    }
+
+    80% {
+        clip-path: var(--move2);
+        transform: translate(10px, -10px);
+    }
+
+    90% {
+        clip-path: var(--move4);
+        transform: translate(-10px, 10px);
+    }
+
+    100% {
+        clip-path: var(--move1);
+        transform: translate(0);
+    }
+}
+
+/* Play Pause button */
+
+.playbtn {
+    --color: white;
+    --size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-size: 2rem;
+    user-select: none;
+    fill: antiquewhite;
+    margin: 1rem;
+}
+
+.playbtn .play {
+    position: absolute;
+    animation: keyframes-fill 0.3s;
+}
+
+.playbtn .pause {
+    position: absolute;
+    display: none;
+    animation: keyframes-fill 0.3s;
+}
+
+/* ------ On check event ------ */
+.playbtn input:checked~.play {
+    display: none;
+}
+
+.playbtn input:checked~.pause {
+    display: block;
+}
+
+/* ------ Hide the default checkbox ------ */
+.playbtn input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* ------ Animation ------ */
+@keyframes keyframes-fill {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Background music button */
+#backGroundMusic {
+    position: relative;
+    width: 9rem;
+    height: 4rem;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    padding: 12px;
+    gap: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#backGroundMusic::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    left: -4px;
+    top: -1px;
+    margin: auto;
+    width: 9.8rem;
+    height: 48px;
+    border-radius: 10px;
+    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+    z-index: -10;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#backGroundMusic::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(20px);
+}
+
+#backGroundMusic:hover::after {
+    filter: blur(30px);
+}
+
+#backGroundMusic:hover::before {
+    transform: rotate(-180deg);
+}
+
+#backGroundMusic:active::before {
+    scale: 0.7;
+}
+
+/* Game buttons */
+
+#playAgain, #reset {
+    position: relative;
+    width: 11em;
+    height: 4em;
+    outline: none;
+    transition: 0.1s;
+    background-color: transparent;
+    border: none;
+    font-size: 13px;
+    font-weight: bold;
+    color: #ddebf0;
+}
+
+#clip {
+    --color: #2761c3;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border: 5px double var(--color);
+    box-shadow: inset 0px 0px 15px #195480;
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+.arrow {
+    position: absolute;
+    transition: 0.2s;
+    background-color: #2761c3;
+    top: 35%;
+    width: 11%;
+    height: 30%;
+}
+
+#leftArrow {
+    left: -13.5%;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 50%);
+    clip-path: polygon(100% 0, 100% 100%, 0 50%);
+}
+
+#rightArrow {
+    -webkit-clip-path: polygon(100% 49%, 0 0, 0 100%);
+    clip-path: polygon(100% 49%, 0 0, 0 100%);
+    left: 102%;
+}
+
+#playAgain:hover #rightArrow, #reset:hover #rightArrow {
+    background-color: #27c39f;
+    left: -15%;
+    animation: 0.6s ease-in-out both infinite alternate rightArrow8;
+}
+
+#playAgain:hover #leftArrow, #reset:hover #leftArrow {
+    background-color: #27c39f;
+    left: 103%;
+    animation: 0.6s ease-in-out both infinite alternate leftArrow8;
+}
+
+.corner {
+    position: absolute;
+    width: 4em;
+    height: 4em;
+    background-color: #2761c3;
+    box-shadow: inset 1px 1px 8px #2781c3;
+    transform: scale(1) rotate(45deg);
+    transition: 0.2s;
+}
+
+#rightTop {
+    top: -1.98em;
+    left: 91%;
+}
+
+#leftTop {
+    top: -1.96em;
+    left: -3.0em;
+}
+
+#leftBottom {
+    top: 2.10em;
+    left: -2.15em;
+}
+
+#rightBottom {
+    top: 45%;
+    left: 88%;
+}
+
+#playAgain:hover #leftTop, #reset:hover #leftTop {
+    animation: 0.1s ease-in-out 0.05s both changeColor8,
+        0.2s linear 0.4s both lightEffect8;
+}
+
+#playAgain:hover #rightTop, #reset:hover #rightTop {
+    animation: 0.1s ease-in-out 0.15s both changeColor8,
+        0.2s linear 0.4s both lightEffect8;
+}
+
+#playAgain:hover #rightBottom, #reset:hover #rightBottom {
+    animation: 0.1s ease-in-out 0.25s both changeColor8,
+        0.2s linear 0.4s both lightEffect8;
+}
+
+#playAgain:hover #leftBottom, #reset:hover #leftBottom {
+    animation: 0.1s ease-in-out 0.35s both changeColor8,
+        0.2s linear 0.4s both lightEffect8;
+}
+
+#playAgain:hover .corner, #reset:hover .corner {
+    transform: scale(1.25) rotate(45deg);
+}
+
+#playAgain:hover #clip, #reset:hover #clip {
+    animation: 0.2s ease-in-out 0.55s both greenLight8;
+    --color: #27c39f;
+}
+
+@keyframes changeColor8 {
+    from {
+        background-color: #2781c3;
+    }
+
+    to {
+        background-color: #27c39f;
+    }
+}
+
+@keyframes lightEffect8 {
+    from {
+        box-shadow: 1px 1px 5px #27c39f;
+    }
+
+    to {
+        box-shadow: 0 0 2px #27c39f;
+    }
+}
+
+@keyframes greenLight8 {
+    from {}
+
+    to {
+        box-shadow: inset 0px 0px 32px #27c39f;
+    }
+}
+
+@keyframes leftArrow8 {
+    from {
+        transform: translate(0px);
+    }
+
+    to {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes rightArrow8 {
+    from {
+        transform: translate(0px);
+    }
+
+    to {
+        transform: translateX(-10px);
+    }
+}
