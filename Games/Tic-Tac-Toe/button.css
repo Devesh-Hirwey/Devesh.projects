@@ -103,12 +103,17 @@
 @media (max-width: 769px) {
     .wild-west-button {
         font-size: 1.5rem;
+        width: 30svw;
     }
 }
 
 @media (max-width: 426px) {
     #modeBtn {
         flex-direction: column;
+    }
+    .wild-west-button {
+        width: 60svw;
+        margin-left: 4.5svw;
     }
 }
 

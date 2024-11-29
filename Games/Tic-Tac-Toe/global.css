@@ -6,8 +6,8 @@
 
 :root {
     --main: #140d1f;
-    --secondary: rgb(215, 243, 250);
-    --third: #198da2;
+    --secondary: #181F0D;
+    --snow-white: #F0F0EC;
 }
 
 html {
@@ -16,24 +16,26 @@ html {
 
 
 body {
-    background: var(--main);
-}
+    background-image: linear-gradient(to right top, #140d1f, #303345, #515a6d, #758696, #9cb3c1, #9cb3c1, #9cb3c1, #9cb3c1, #758696, #515a6d, #303345, #140d1f);
+
+    }
 
 main {
     margin-top: 10rem;
 }
 section {
-    height: 120svh;
+    height: 125svh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+   
 }
 
 /* Mode Selection */
 
 #selectMode {
-    background: var(--third);
+    background: var(--main);
     min-width: 40svw;
     max-width: 80svw;
     width: 70%;
@@ -47,7 +49,7 @@ section {
 
 #selectMode>h1 {
     font-size: clamp(3rem, 12vw, 6.9rem);
-    color: var(--main);
+    color: var(--snow-white);
     font-style: bold;
     text-transform: uppercase;
     text-align: center;
@@ -219,12 +221,12 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--secondary);
+    color: var(--main);
 }
 
 .box:hover {
-    background-color: var(--secondary);
-    color: var(--main);
+    background-color: var(--snow-white);
+    color: var(--secondary);
 }
 
 .info {
@@ -272,13 +274,13 @@ section {
 
 #gameButtons{
     margin-top: 2rem;
-    margin-left: 7rem;
+    margin-left: 5rem;
     display: flex;
     gap: 7rem;
 }
 #music-ground{
     margin-top: 2rem;
-    margin-left: 7rem;
+    margin-left: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -363,6 +365,10 @@ section {
     .gameInfo {
         text-align: center;
         margin-top: 4rem;
+        margin-left: -4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
     }
 
     .imgbox {
@@ -455,7 +461,7 @@ header>nav {
     top: 0;
     width: 40%;
     height: 8rem;
-    background: rgba(215, 243, 250, 0.85);
+    background: hsla(192, 78%, 5%, 0.507);
     opacity: 100%;
     padding: 0 .5rem;
     display: flex;
@@ -487,8 +493,9 @@ header>nav>ul>li>a {
 header>nav>ul>li>a:hover {
     text-shadow: 0 0 3rem var(--secondary);
     background-color: var(--main);
-    color: var(--secondary);
+    color: var(--snow-white);
     font-size: 2.5rem;
+    border: none;
 }
 
 .hidden {
@@ -504,8 +511,8 @@ header>nav>ul>li>a:hover {
 
 footer {
     width: 100%;
-    height: 30svh;
-    position: relative;
+    height: 20svh;
+    position: static;
     padding: 0;
     margin-top: 7rem;
     display: flex;
@@ -513,33 +520,40 @@ footer {
     align-items: center;
     flex-direction: column;
 }
-.social-icons {
+#footer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    height: 20svh;
+}
+#footer .social-icons {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 3rem;
-    margin-left: -7rem;
+    margin-left: 0;
 }
-.social-icons > li {
+#footer  .social-icons > li {
     list-style: none;
 }
-.social-icons > li > a {
-    color: var(--secondary-color);
+#footer  .social-icons > li > a {
+    color: var(--secondary);
     font-size: 3.2rem;
     transition: .6s ease-in;
 }
 
-.social-icons > li > a:hover {
+#footer  .social-icons > li > a:hover {
     font-size: 4rem;
     color: antiquewhite;
 }
-footer > p {
-    font-size: 1.5rem;
-    color: aliceblue;
-    overflow: hidden;
+#footer > p {
+    font-size: 2.5rem;
+    color: var(--main);
 }
 
-footer .wave {
+#footer .wave {
     position: absolute;
     bottom: 0;
     height: 65svh;
@@ -555,6 +569,7 @@ footer .wave {
 @media (max-width: 769px) {
     header>nav {
         height: 4rem;
+        margin-left: 2rem;
     }
 
     header>nav>ul>li>a {
@@ -569,9 +584,12 @@ footer .wave {
 }
 
 @media (max-width: 430px) {
+    html {
+        width: 500px;
+    }
     header>nav {
         height: 4rem;
-        width: 80%;
+        width: 50%;
     }
 
     header>nav>ul>li>a {
@@ -582,5 +600,8 @@ footer .wave {
     header>nav>ul>li>a:hover {
         font-size: 1.5rem;
         background-color: transparent;
+    }
+    footer {
+        margin-top: 34rem;
     }
 }
