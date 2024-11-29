@@ -4,9 +4,23 @@ function hideSelectMode() {
     const SinglePlayerButton = document.getElementById('Single-player-button');
     const ContinueButton = document.getElementById('continueBtn');
     const mode = document.getElementById('mode');
-    const heading =document.getElementById('Game-heading');
+    const heading = document.getElementById('Game-heading');
 
-    // Test
+    var lastScrollTop = 0;
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", function () {
+        var scrollTop = window.scrollY; 1
+
+        if (scrollTop > lastScrollTop) {
+            navbar.classList.add("hidden");
+        } else {
+            navbar.classList.remove("hidden");
+        }
+
+        lastScrollTop = scrollTop;
+    });
+
 
     const CoinTossContainer = document.querySelector('.CoinTossContainer');
     const gameContainer = document.querySelector('.gameContainer');
